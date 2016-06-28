@@ -69,3 +69,21 @@ var doMathSoIDontHaveTo = function(n, func) {
 
 doMathSoIDontHaveTo(5, square);
 doMathSoIDontHaveTo(4, increment);
+
+var funcCaller = function(func, arg) {
+  return func(arg);
+};
+
+var firstVal = function(arr, func) {
+  func(arr[0], 0, arr);
+};
+
+firstVal = function(list, func) {
+  if(Array.isArray(list)){
+    func(arr[0],0,arr);
+  } else {
+    for (var k in list) {
+      return func(list[k], k, list);
+    }
+  }
+}
